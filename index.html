@@ -5,79 +5,51 @@
     <meta name="description" content="the brain dump of my life">
     <title>Zaki's Brain Dump</title>
     <style>
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f9f9f9;
+        color: #333;
+        padding-top: 50px;
+      }
 
-.dropdown-item {
-  position: relative;
-  display: inline-block;
-}
+      h1 {
+        margin-bottom: 10px;
+      }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+      h2 {
+        font-weight: normal;
+        color: #666;
+        margin-bottom: 30px;
+      }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.show {
-  display: block;
-}
-
+      select {
+        padding: 10px 15px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
+
     <h1 id="main-header">
       ZAKI'S BRAIN DUMP
     </h1>
+    
     <h2 id="secondary-header">
       This is the brain dump where i just code stuff<br>
       That i feel like doing when i am super bored.
     </h2>
-    <ul class="dropdown-menu">
-  <li class="dropdown-item">
-    <button class="dropdown-toggle" onclick="toggleDropdown()">Log list ▾</button>
-    <ul id="logDropdown" class="dropdown-content">
-      <li><a href="logs/august2026/log1.html">Friday August 14 2026</a></li>
-      <li><a href="logs/august2026/log2.html">Saturday August 15 2026</a></li>
-      <li><a href="logs/august2026.log3.html">Sunday August 16 2026</a></li>
-    </ul>
-  </li>
-</ul>
-    </ul>
-    <script>
-      function toggleDropdown() {
-  var dropdown = document.getElementById("logDropdown");
-  dropdown.classList.toggle("show");
-}
-window.onclick = function(event) {
-  if (!event.target.matches('.dropdown-toggle')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
 
-    </script>
+    <select name="logdropdown" id="logDropdown" onchange="if(this.value) window.location.href=this.value;">
+      <option value="" selected disabled>Log list ▾</option>
+      <option value="logs/august2026/log1.html">Friday August 14 2026</option>
+      <option value="logs/august2026/log2.html">Saturday August 15 2026</option>
+      <option value="logs/august2026.log3.html">Sunday August 16 2026</option>
+    </select>
+
   </body>
 </html>
