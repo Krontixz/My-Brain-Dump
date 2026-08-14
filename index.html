@@ -53,7 +53,7 @@ ul {
     <ul class="dropdown-menu">
   <li class="dropdown-item">
     <button class="dropdown-toggle" onclick="toggleDropdown()">Log list ▾</button>
-    <ul id="myDropdown" class="dropdown-content">
+    <ul id="logDropdown" class="dropdown-content">
       <li><a href="logs/august2026/log1.html">Friday August 14 2026</a></li>
       <li><a href="logs/august2026/log2.html">Saturday August 15 2026</a></li>
       <li><a href="logs/august2026.log3.html">Sunday August 16 2026</a></li>
@@ -63,7 +63,7 @@ ul {
     </ul>
     <script>
       function toggleDropdown() {
-  var dropdown = document.getElementById("myDropdown");
+  var dropdown = document.getElementById("logDropdown");
   dropdown.classList.toggle("show");
 }
 window.onclick = function(event) {
