@@ -1,76 +1,73 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="the brain dump of my life">
     <title>Zaki's Brain Dump</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f9f9f9;
-        color: #333;
-        padding-top: 50px;
-      }
-
-      h1 {
-        margin-bottom: 10px;
-      }
-
-      h2 {
-        font-weight: normal;
-        color: #666;
-        margin-bottom: 30px;
-      }
-
-      select {
-        padding: 10px 15px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #fff;
-        cursor: pointer;
-      }
-      #bookmarklets {
-        padding: 10px 15px;
-         position: absolute;
-        bottom: 20px;
-         left: 50%;
-        transform: translateX(-50%);
-        width: 640;
-        length: 360;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            color: #333;
+            padding-top: 50px;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-weight: normal;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        select {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        #bookmarklets {
+            padding: 10px 15px;
+            margin: 40px auto 20px auto;
+            max-width: 640px;
+        }
+        .bookmarklet-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
 
-    <h1 id="main-header">
-      ZAKI'S BRAIN DUMP
-    </h1>
+    <h1 id="main-header">ZAKI'S BRAIN DUMP</h1>
     
     <h2 id="secondary-header">
-      This is the brain dump where i just code stuff<br>
-      That i feel like doing when i am super bored.
+        This is the brain dump where i just code stuff<br>
+        That i feel like doing when i am super bored.
     </h2>
 
     <select name="logdropdown" id="logDropdown" onchange="if(this.value) window.location.href=this.value;">
-      <option value="" selected disabled>Log list ▾</option>
-      <option value="logs/august2026/log1.html">Friday August 14 2026</option>
-      <option value="logs/august2026/log2.html">Saturday August 15 2026</option>
-      <option value="logs/august2026.log3.html">Sunday August 16 2026</option>
+        <option value="" selected disabled>Log list ▾</option>
+        <option value="logs/august2026/log1.html">Friday August 14 2026</option>
+        <option value="logs/august2026/log2.html">Saturday August 15 2026</option>
+        <option value="logs/august2026/log3.html">Sunday August 16 2026</option>
     </select>
 
-      <section id="bookmarklets">
+    <section id="bookmarklets">
         <div class="bookmarklet-container">
-          <h2 class="bookmarklet-container-text">
-            Grumpy Kaden Virus
-          </h2>
-          <figure>
-            <img src="assets/grumpy-kaden.png" alt="the grumpy kaden">
-            <figcaption><a href="bookmarklets/grumpy-kaden.js">Grumpy Kaden (Drag into bookmarklets)</figcaption>
-          </figure>
+            <h2 class="bookmarklet-container-text">Grumpy Kaden Virus</h2>
+            <figure>
+                <img src="assets/grumpy-kaden.png" alt="the grumpy kaden">
+                <figcaption>
+                    <a href="javascript:(function(){var s=document.createElement('script');s.src='bookmarklets/grumpy-kaden.js';document.body.appendChild(s);})();">Grumpy Kaden</a> (Drag into bookmarklets)
+                </figcaption>
+            </figure>
         </div>
-          
-          
-  </body>
+    </section>
+
+</body>
 </html>
