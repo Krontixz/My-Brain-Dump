@@ -9,7 +9,7 @@
             font-family: Caveat, sans-serif;
             text-align: center;
             background-color: #1F51FF;
-            color: FF0000;
+            color: #FF0000;
             padding-top: 50px;
         }
         h1 {
@@ -17,7 +17,7 @@
         }
         h2 {
             font-weight: bold;
-            color: FFCC00;
+            color: #FFCC00;
             margin-bottom: 30px;
         }
         select {
@@ -39,6 +39,43 @@
             display: block;
             margin: 10px auto;
         }
+        #text-exporter {
+            margin: 40px auto;
+            max-width: 640px;
+            padding: 10px 15px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #FFCC00;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #000;
+            resize: vertical;
+        }
+        .btn-container {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            background-color: #FFCC00;
+            color: #1F51FF;
+            cursor: pointer;
+        }
+        .btn-container button:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +95,16 @@
         <option value="logs/august2026.log4.html">Monday August 17 2026</option>
     </select>
 
+    <section id="text-exporter">
+        <textarea id="dumpInput" placeholder="Dump your thoughts or code here..."></textarea>
+        <div class="btn-container">
+            <button onclick="exportFile('txt', 'text/plain')">Plain Text</button>
+            <button onclick="exportFile('md', 'text/markdown')">Markdown</button>
+            <button onclick="exportFile('js', 'application/javascript')">JavaScript</button>
+            <button onclick="exportFile('html', 'text/html')">HTML</button>
+        </div>
+    </section>
+
     <section id="bookmarklets">
         <div class="bookmarklet-container">
             <h2 class="bookmarklet-container-text">Grumpy Kaden Virus</h2>
@@ -69,6 +116,21 @@
             </figure>
         </div>
     </section>
+
+    <script>
+        function exportFile(extension, mimeType) {
+            const text = document.getElementById('dumpInput').value;
+            const blob = new Blob([text], { type: mimeType });
+            const link = document.createElement('a');
+            link.download = `dump.${extension}`;
+            link.href = window.URL.createObjectURL(blob);
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(link.href);
+        }
+    </script>
 
 </body>
 </html>
