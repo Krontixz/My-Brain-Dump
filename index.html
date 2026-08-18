@@ -76,6 +76,34 @@
         .btn-container button:hover {
             opacity: 0.9;
         }
+        /* Memories Section Styling */
+#memories {
+    margin: 40px auto;
+    max-width: 640px;
+    padding: 10px 15px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memorie-video {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border: 3px solid #FFCC00;
+    border-radius: 6px;
+    background-color: #000;
+}
+
+.video-container-subheading {
+    color: #FFCC00;
+    font-size: 20px;
+    margin-top: 12px;
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -117,18 +145,18 @@
             </figure>
         </div>
     </section>
-    <section id="memories">
-        <div class="video-container">
-            <figure class="figure-video-container">
-        <video src="assets/memories/IMG_0342.mov" controls width="640" height="360" class="memorie-video">
-            <figcaption>
-                Dragon claw tie.
-                Taken: June 11th 11:02am
-            </figcaption>
+    
+   <section id="memories">
+    <div class="video-container">
+        <video src="assets/memories/IMG_0342.mov" controls class="memorie-video">
+            Your browser does not support the video tag.
         </video>
-            </figure>
-        </div>
-            
+        <h4 class="video-container-subheading">
+            Dragon Claw tie.<br>
+            Recorded: June 18 2026 11:08 am
+        </h4>
+    </div>
+</section>
 
     <script>
         function exportFile(extension, mimeType) {
