@@ -10,16 +10,37 @@
             text-align: center;
             background-color: #1F51FF;
             color: #FF0000;
-            padding-top: 50px;
+            padding-top: 60px;
         }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #000;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #FFCC00;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
         h1 {
             margin-bottom: 10px;
         }
+
         h2 {
             font-weight: bold;
             color: #FFCC00;
             margin-bottom: 30px;
         }
+
         select {
             padding: 10px 15px;
             font-size: 16px;
@@ -27,23 +48,25 @@
             border-radius: 4px;
             background-color: #fff;
             cursor: pointer;
+            margin-bottom: 40px;
         }
-        #bookmarklets {
-            padding: 10px 15px;
-            margin: 40px auto 20px auto;
+
+        #text-exporter,
+        #bookmarklets,
+        #memories,
+        #scripts {
+            margin: 50px auto;
             max-width: 640px;
+            padding: 10px 15px;
         }
+
         .bookmarklet-container img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 10px auto;
         }
-        #text-exporter {
-            margin: 40px auto;
-            max-width: 640px;
-            padding: 10px 15px;
-        }
+
         textarea {
             width: 100%;
             height: 200px;
@@ -56,6 +79,7 @@
             color: #000;
             resize: vertical;
         }
+
         .btn-container {
             margin-top: 15px;
             display: flex;
@@ -63,6 +87,7 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+
         .btn-container button {
             padding: 10px 20px;
             font-size: 16px;
@@ -73,55 +98,45 @@
             color: #1F51FF;
             cursor: pointer;
         }
+
         .btn-container button:hover {
             opacity: 0.9;
         }
-        /* Memories Section Styling */
-#memories {
-    margin: 40px auto;
-    max-width: 640px;
-    padding: 10px 15px;
-}
 
-.video-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
 
-.memorie-video {
-    width: 100%;
-    max-width: 640px;
-    height: auto;
-    border: 3px solid #FFCC00;
-    border-radius: 6px;
-    background-color: #000;
-}
+        .memorie-video {
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            border: 3px solid #FFCC00;
+            border-radius: 6px;
+            background-color: #000;
+        }
 
-.video-container-subheading {
-    color: #FFCC00;
-    font-size: 20px;
-    margin-top: 12px;
-    text-align: center;
-}
-        nav {
-  position: fixed;   
-  top: 0;            
-  left: 0;           
-  width: 100%;       
-  z-index: 1000;
-            background-color: black
-}
-
+        .video-container-subheading {
+            color: #FFCC00;
+            font-size: 20px;
+            margin-top: 12px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <h1 id="main-header">ZAKI'S BRAIN DUMP</h1>
     <nav>
         <a href="#text-exporter">Text Exporter</a>
+        <a href="#bookmarklets">Bookmarklets</a>
         <a href="#memories">Memories</a>
+        <a href="#scripts">Scripts</a>
     </nav>
+
+    <h1 id="main-header">ZAKI'S BRAIN DUMP</h1>
     
     <h2 id="secondary-header">
         This is the brain dump where i just code stuff<br>
@@ -133,7 +148,7 @@
         <option value="logs/august2026/log1.html">Friday August 14 2026</option>
         <option value="logs/august2026/log2.html">Saturday August 15 2026</option>
         <option value="logs/august2026/log3.html">Sunday August 16 2026</option>
-        <option value="logs/august2026.log4.html">Monday August 17 2026</option>
+        <option value="logs/august2026/log4.html">Monday August 17 2026</option>
     </select>
 
     <section id="text-exporter">
@@ -149,7 +164,7 @@
 
     <section id="bookmarklets">
         <div class="bookmarklet-container">
-            <h2 class="bookmarklet-container-text">Grumpy Kaden Virus</h2>
+            <h2>Grumpy Kaden Virus</h2>
             <figure>
                 <img src="assets/grumpy-kaden.png" alt="the grumpy kaden">
                 <figcaption>
@@ -159,30 +174,31 @@
         </div>
     </section>
     
-   <section id="memories">
-    <div class="video-container">
+    <section id="memories">
         <h2>Memories</h2>
-        <video src="assets/memories/IMG_0342.mov" controls class="memorie-video">
-            Your browser does not support the video tag.
-        </video>
-        <h4 class="video-container-subheading">
-            Dragon Claw tie.<br>
-            Recorded: June 18 2026 11:08 am
-        </h4>
-    </div>
-       <div class="video-container">
-           <img width="640" length="360" src="assets/memories/IMG_0344.jpeg">
-           <h4 class="video-container-subheading">
-               Sweaty Me.<br>
-               Taken: August 13th 2026 1:48pm
-           </h4>
-       </div>
-</section>
+        <div class="video-container">
+            <video src="assets/memories/IMG_0342.mov" controls class="memorie-video">
+                Your browser does not support the video tag.
+            </video>
+            <h4 class="video-container-subheading">
+                Dragon Claw tie.<br>
+                Recorded: June 18 2026 11:08 am
+            </h4>
+        </div>
+        <div class="video-container">
+            <img width="640" height="360" src="assets/memories/IMG_0344.jpeg" alt="Sweaty Me">
+            <h4 class="video-container-subheading">
+                Sweaty Me.<br>
+                Taken: August 13th 2026 1:48pm
+            </h4>
+        </div>
+    </section>
+
     <section id="scripts">
-        <h1>Scripts</h1>
         <h2>TEXT CHECKER</h2>
-        <h4>Press Enter after typing text.</h4>
+        <h4 class="video-container-subheading">Press Enter after typing text.</h4>
         <textarea id="typedTextBox" onkeydown="handleKeyPress(event)" placeholder="Type coding or zaki..."></textarea>
+    </section>
 
     <script>
         function exportFile(extension, mimeType) {
@@ -197,13 +213,13 @@
             document.body.removeChild(link);
             window.URL.revokeObjectURL(link.href);
         }
+
         function handleKeyPress(event) {
             if (event.key === "Enter") {
                 textChecker();
             }
         }
     </script>
-        /* script link for scripts */
-<script src="scripts/text-checker.js">
+    <script src="scripts/text-checker.js"></script>
 </body>
 </html>
