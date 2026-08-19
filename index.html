@@ -178,6 +178,10 @@
            </h4>
        </div>
 </section>
+    <section id="scripts">
+        <h2>TEXT CHECKER</h2>
+        <h4>Press Enter after typing text.</h4>
+        <textarea id="typedTextBox" onkeydown="handleKeyPress(event)" placeholder="Type coding or zaki..."></textarea>
 
     <script>
         function exportFile(extension, mimeType) {
@@ -192,7 +196,13 @@
             document.body.removeChild(link);
             window.URL.revokeObjectURL(link.href);
         }
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                textChecker();
+            }
+        }
     </script>
-
+        /* script link for scripts */
+<script src="scripts/text-checker.js">
 </body>
 </html>
