@@ -125,6 +125,16 @@
             margin-top: 12px;
             text-align: center;
         }
+            #score-text {
+            color: red;
+            font-size: 20px;
+            margin-top: 12px;
+            text-align: center;
+        }
+        #score-clicker {
+            color: green;
+            position: absolute
+        }
         a {
             font-family: arial;
             font-weight: bold;
@@ -219,6 +229,16 @@
         <h2>StringSplitter</h2>
         <h4 class="video-container-subheading">Press Shift after typing text</h4>
         <textarea id="typedTextBox" onkeydown="handleKeyPress1(event)"  placeholder="type something... it will split it"></textarea>
+        <div class="video-container">
+            <h4 class="video-container-subheading">
+                Press the button to add one to the score
+            </h4>
+            <button onclick="addScore(event)" id="score-clicker">
+                Click Me!
+            </button>
+            <h4 id="score-text">
+                Score:
+            </h4>
     </section>
 
     <script>
@@ -246,6 +266,15 @@
                 textSplitter();
             }
         }
+
+        let score = 0
+        
+        function addScore(event) {
+            score = score + 1;
+            document.getElementById("score-text").innerText = score;
+        }
+            
+            
     </script>
     <script src="scripts/text-checker.js"></script>
     <script src="scripts/text-splitter.js"></script>
