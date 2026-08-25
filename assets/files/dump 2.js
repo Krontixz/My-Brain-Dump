@@ -1,0 +1,10 @@
+console.log(`"Hello! I'm your coding fun fact guide!"`);
+const botName = "ZakiBot";
+const botLocation = "Mars";
+const favoriteLanguage = "JavaScript";
+console.log(`"My name is ${botName} and I live on ${botLocation}."`);
+console.log(`"My favorite programming language is ${favoriteLanguage}."`);
+let codingFact = "Javascript runs on google's V8 Engine";
+console.log(`${codingFact}`);
+codingFact = favoriteLanguage + ' Is the best language ever!';
+console.log(codingFact);
