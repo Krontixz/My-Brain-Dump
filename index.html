@@ -29,6 +29,7 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
+            font-family: arial;
         }
 
         h1 {
@@ -54,7 +55,8 @@
         #text-exporter,
         #bookmarklets,
         #memories,
-        #scripts {
+        #scripts,
+        #converter {
             margin: 50px auto;
             max-width: 640px;
             padding: 10px 15px;
@@ -88,7 +90,8 @@
             flex-wrap: wrap;
         }
 
-        .btn-container button {
+        .btn-container button,
+        .btn-container input[type="file"] {
             padding: 10px 20px;
             font-size: 16px;
             font-weight: bold;
@@ -108,6 +111,7 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
+            position: relative;
         }
 
         .memorie-video {
@@ -125,22 +129,26 @@
             margin-top: 12px;
             text-align: center;
         }
-            #score-text {
+
+        #score-text {
             color: red;
             font-size: 20px;
             margin-top: 12px;
             text-align: center;
         }
+
         #score-clicker {
             color: green;
-            position: absolute
         }
+
         a {
             font-family: arial;
             font-weight: bold;
-            color: yellow
+            color: yellow;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.min.js"></script>
 </head>
 <body>
 
@@ -149,6 +157,7 @@
         <a href="#bookmarklets">Bookmarklets</a>
         <a href="#memories">Memories</a>
         <a href="#scripts">Scripts</a>
+        <a href="#converter">Docx Converter</a>
     </nav>
 
     <h1 id="main-header">ZAKI'S BRAIN DUMP</h1>
@@ -174,6 +183,15 @@
             <button onclick="exportFile('md', 'text/markdown')">Markdown</button>
             <button onclick="exportFile('js', 'application/javascript')">JavaScript</button>
             <button onclick="exportFile('html', 'text/html')">HTML</button>
+        </div>
+    </section>
+
+    <section id="converter">
+        <h2>HTML / MARKDOWN TO WORD CONVERTER</h2>
+        <h4 class="video-container-subheading">Upload an .html or .md file to convert to .docx</h4>
+        <div class="btn-container">
+            <input type="file" id="fileInput" accept=".html,.md">
+            <button onclick="convertToWord()">Convert to Word</button>
         </div>
     </section>
 
@@ -228,7 +246,7 @@
         <textarea id="typedTextBox" onkeydown="handleKeyPress(event)" placeholder="Type coding or zaki..."></textarea>
         <h2>StringSplitter</h2>
         <h4 class="video-container-subheading">Press Shift after typing text</h4>
-        <textarea id="typedTextBox" onkeydown="handleKeyPress1(event)"  placeholder="type something... it will split it"></textarea>
+        <textarea id="typedTextBox1" onkeydown="handleKeyPress1(event)" placeholder="type something... it will split it"></textarea>
         <h2>Clicker</h2>
         <div class="video-container">
             <h4 class="video-container-subheading">
@@ -238,8 +256,9 @@
                 Click Me!
             </button>
             <h4 id="score-text">
-                Score:
+                Score: 0
             </h4>
+        </div>
     </section>
 
     <script>
@@ -268,16 +287,15 @@
             }
         }
 
-        let score = 0
+        let score = 0;
         
         function addScore(event) {
             score = score + 1;
-            document.getElementById("score-text").innerText = score;
+            document.getElementById("score-text").innerText = "Score: " + score;
         }
-            
-            
     </script>
     <script src="scripts/text-checker.js"></script>
     <script src="scripts/text-splitter.js"></script>
+    <script src="scripts/word-converter.js"></script>
 </body>
 </html>
