@@ -1,11 +1,18 @@
 function ageRoaster() {
   let ageText = Number(document.getElementById("age-field").value);
   
-  if (ageText >= 0 && ageText <= 10) {
-    alert(`Your age is ${ageText} and you are still as old as me!`);
+  if (ageText >= 0 && ageText <= 3) {
+    alert(`Your age is ${ageText} and you are a toddler!`);
   } else if (ageText > 10 && ageText <= 12) {
     alert(`Your age is ${ageText} and you arent a stinking teenager!`);
-  } else if (ageText >= 13 && ageText <= 17) {
+  }
+  else if (ageText >= 4 && ageText <= 7) {
+    alert(`Your age is ${ageText} and you are a bigish boy now!`);
+  }
+  else if (ageText >= 8 && ageText <= 10) {
+    alert(`Your age is ${ageText} and you are me or miku!`);
+  }
+  else if (ageText >= 13 && ageText <= 17) {
     alert(`Your age is ${ageText} and you are a stinking teenager!`);
   } else if (ageText >= 18 && ageText <= 25) {
     alert(`Your age is ${ageText} and you are in college like innaya!`);
