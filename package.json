@@ -1,0 +1,28 @@
+{
+  "name": "zaki's brain dump",
+  "version": "1.0.0",
+  "description": "my brain dump first exeifided",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+  "build:win": "electron-builder --win"
+  },
+  "keywords": [
+    "idk"
+  ],
+  "author" : [
+    "Zaki A. Hashim"
+  ],
+  "license": "none",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "io.github.krontixz.zakibraindump",
+    "productName": "zakisbranidump",
+    "win": {
+      "target": "portable"
+    }
+  }
+}
