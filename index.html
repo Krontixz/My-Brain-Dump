@@ -347,6 +347,12 @@
             }
         }
 
+        function handleKeyPress4(event) {
+            if (event.key === "Shift") {
+                coinFlip();
+            }
+        }
+
         let score = 0;
         
         function addScore(event) {
@@ -359,5 +365,6 @@
     <script src="scripts/word-converter.js"></script>
     <script src="scripts/whitespace-remover.js"></script>
     <script src="scripts/age-roaster.js"></script>
+    <script src="scripts/coin-flip.js"></script>
 </body>
 </html>
