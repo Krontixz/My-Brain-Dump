@@ -305,8 +305,11 @@
         <h4 class="video-container-subheading">Press Shift After Typing Text, i will roast your age.</h4>
         <textarea id="age-field" onkeydown="handleKeyPress3(event)" placeholder="type a number from one through 100 or your actual age. Lets see what roasts you get!"></textarea>
         <h2>COIN FLIP</h2>
-        <h4 class="video-container-subheading">Press Shift after typing text.</h4>
-        <textarea id="guess-box" onkeydown="handleKeyPress4(event)" placeholder="type heads or tails (CASE SENTISTIVE)"></textarea>
+        <h4 class="video-container-subheading">Enter heads or tails, then click Flip Coin or press Shift.</h4>
+        <textarea id="guess-box" onkeydown="handleKeyPress4(event)" placeholder="Type heads or tails"></textarea>
+        <div class="btn-container">
+            <button onclick="coinFlip()">Flip Coin</button>
+        </div>
     </section>
 
     <script>
