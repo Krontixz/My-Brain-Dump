@@ -95,7 +95,7 @@
             resize: vertical;
         }
 
-         #age-field {
+        #age-field {
             width: 100%;
             height: 200px;
             box-sizing: border-box;
@@ -108,7 +108,7 @@
             resize: vertical;
         }
 
-         #guess-box {
+        #guess-box {
             width: 100%;
             height: 200px;
             box-sizing: border-box;
@@ -119,6 +119,24 @@
             background-color: #fff;
             color: #000;
             resize: vertical;
+        }
+
+        #term {
+            width: 100%;
+            height: 200px;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #FFCC00;
+            border-radius: 4px;
+            background-color: #000;
+            color: #00FF00;
+            font-family: monospace;
+            resize: vertical;
+        }
+
+        #sandbox-frame {
+            display: none;
         }
 
         .btn-container {
@@ -190,6 +208,8 @@
     <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.min.js"></script>
 </head>
 <body>
+
+    <iframe id="sandbox-frame" src="about:blank"></iframe>
 
     <nav>
         <a href="#text-exporter">Text Exporter</a>
@@ -267,6 +287,10 @@
     </section>
 
     <section id="scripts">
+        <h2>JS REPL TERMINAL</h2>
+        <h4 class="video-container-subheading">Type JavaScript code and press Enter to execute in an isolated window.</h4>
+        <textarea id="term" spellcheck="false"></textarea>
+
         <h2>freeCodeCamp.org</h2>
         <div class="video-container">
             <img width="640" height="360" src="assets/files/Chatbot.png" alt="chatbot code">
@@ -363,6 +387,7 @@
             document.getElementById("score-text").innerText = "Score: " + score;
         }
     </script>
+    <script src="scripts/terminal.js"></script>
     <script src="scripts/text-checker.js"></script>
     <script src="scripts/text-splitter.js"></script>
     <script src="scripts/word-converter.js"></script>
