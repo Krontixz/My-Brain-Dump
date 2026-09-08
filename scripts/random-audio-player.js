@@ -5,7 +5,7 @@ async function playRandomAudio() {
     const filePaths = await response.json();
     const randomIndex = Math.floor(Math.random() * filePaths.length);
     const randomFilePath = filePaths[randomIndex];
-    console.log(`Playing: ${randomFilePath}`);
+    alert(`Playing: ${randomFilePath}`);
     audio.src = randomFilePath;
     await audio.play(); 
   } catch (error) {
