@@ -203,6 +203,16 @@
             font-weight: bold;
             color: yellow;
         }
+        #play-sound-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            background-color: #FFCC00;
+            color: #1F51FF;
+            cursor: pointer;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.min.js"></script>
@@ -333,6 +343,11 @@
         <textarea id="guess-box" onkeydown="handleKeyPress4(event)" placeholder="Type heads or tails"></textarea>
         <div class="btn-container">
             <button onclick="coinFlip()">Flip Coin</button>
+        </div>
+        <h2>RandomSongPlayer™</h2>
+        <h4 class="video-container-subheading">This totaly copyrighted tool will play a random sound effect or song.</h4>
+        <div class="btn-container">
+            <button id="play-sound-btn" onlick="playRandomAudio()">Play Random Song</button>
         </div>
     </section>
 
