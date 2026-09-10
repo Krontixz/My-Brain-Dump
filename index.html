@@ -243,7 +243,7 @@
         <option value="logs/august2026/log3.html">Sunday August 16 2026</option>
         <option value="logs/august2026/log4.html">Monday August 17 2026</option>
     </select>
-
+    
     <section id="text-exporter">
         <h2>ZAKI'S SIMPLE TEXT EDITOR</h2>
         <textarea id="dumpInput" placeholder="Dump your thoughts or code here..."></textarea>
@@ -349,6 +349,11 @@
         <div class="btn-container">
             <button id="play-audio-btn" onlick="playRandomAudio()">Play Random Song</button>
         </div>
+        <h2>Celcus to farentheit converter and vice versa!</h2>
+        <h4 class="video-container-subheading">Enter your number and your measurement, it is not case sensitive, but it has to be structured like this<br>
+            [Number] [Measurement (Farentheit or Celcius must spell corretly)
+        </h4>
+        <textarea id="tempbox" onkeydown="handleKeyPress5(event)" placeholder="Type the correct noation explained above into here!"></textarea>
     </section>
 
     <script>
