@@ -225,6 +225,16 @@
             color: #1F51FF;
             cursor: pointer;
         }
+        #roast-generator-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            background-color: #FFCC00;
+            color: #1F51FF;
+            cursor: pointer;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.min.js"></script>
@@ -359,13 +369,16 @@
         <h2>RandomSongPlayer™</h2>
         <h4 class="video-container-subheading">This totaly copyrighted tool will play a random sound effect or song.</h4>
         <div class="btn-container">
-            <button id="play-audio-btn" onlick="playRandomAudio()">Play Random Song</button>
+            <button id="play-audio-btn" onclick="playRandomSong()">Play Random Song</button>
         </div>
         <h2>Celcus to farentheit converter and vice versa!</h2>
         <h4 class="video-container-subheading">Enter your number and your measurement, it is not case sensitive, but it has to be structured like this<br>
             [Number] [Measurement (Farentheit or Celcius must spell corretly)
         </h4>
         <textarea id="tempbox" onkeydown="handleKeyPress5(event)" placeholder="Type the correct noation explained above into here!"></textarea>
+        <h2>Press the button to get roasted lol</h2>
+        <h4 class="video-container-subheading">You will get roasted super badly, it is as simple as it sounds, press teh button</h4>
+        <button id="roast-generator-button" onclick="roastButtonActivation()">Press me to cry</button>
     </section>
 
     <script>
@@ -418,6 +431,9 @@
             }
         }
 
+        function handleKeyPress6(event) {
+            if (event.key === 
+
         let score = 0;
         
         function addScore(event) {
@@ -434,5 +450,6 @@
     <script src="scripts/coin-flip.js"></script>
     <script src="scripts/random-audio-player.js"></script>
     <script src="scripts/temp-converter.js"></script>
+    <script src="scripts/roast-generator.js"></script>
 </body>
 </html>
