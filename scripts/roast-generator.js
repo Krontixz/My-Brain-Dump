@@ -14,10 +14,17 @@ function roastGenerator() {
     "big eared elf",
     "teachers pet"
     ];
-  let randomPosition = Math.floor(Math.random() * adjective.length);
+  let randomPosition = Math.floor(Math.random() * adjectives.length);
   let pickedAdjective = adjectives[randomPosition];
   const nouns = [
     "potato",
     "godzilla",
     "brat",
+    "in-n-out worker"
     ]
+  let randomPositionNoun = Math.floor(Math.random() * nouns.length);
+  let pickedNoun = adjectives[randomPositionNoun];
+  let combinedSentence = `You are a ${pickedAdjective} ${pickedNoun}`
+  alert(`${combinedSentence}`);
+}
+
