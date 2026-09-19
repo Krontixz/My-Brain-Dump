@@ -23,8 +23,9 @@ function roastGenerator() {
     "in-n-out worker"
     ]
   let randomPositionNoun = Math.floor(Math.random() * nouns.length);
-  let pickedNoun = adjectives[randomPositionNoun];
+  let pickedNoun = nouns[randomPositionNoun];
   let combinedSentence = `You are a ${pickedAdjective} ${pickedNoun}`
   alert(`${combinedSentence}`);
+  document.getElementById('roast-generator-button').addEventListener('click', roastGenerator());
 }
 
