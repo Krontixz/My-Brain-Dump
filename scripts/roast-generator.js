@@ -26,6 +26,5 @@ function roastGenerator() {
   let pickedNoun = nouns[randomPositionNoun];
   let combinedSentence = `You are a ${pickedAdjective} ${pickedNoun}`
   alert(`${combinedSentence}`);
-  document.getElementById('roast-generator-button').addEventListener('click', roastGenerator());
 }
 
