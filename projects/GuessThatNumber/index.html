@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fun guess that number game with an ai i created">
+        <title>Guess That Number!</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 2rem 1rem;
+                color: #202622;
+                background: #f6f7f5;
+                font-family: system-ui, sans-serif;
+            }
+
+            main {
+                max-width: 34rem;
+                margin: 2rem auto;
+            }
+
+            h1 {
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                margin-top: 0;
+                margin-bottom: 2rem;
+                color: #56615a;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+            }
+
+            textarea {
+                box-sizing: border-box;
+                width: 100%;
+                min-height: 3rem;
+                padding: 0.75rem;
+                border: 1px solid #aab4ad;
+                border-radius: 4px;
+                background: #fff;
+                color: inherit;
+                font: inherit;
+                resize: vertical;
+            }
+
+            textarea:focus {
+                outline: 2px solid #356b4b;
+                outline-offset: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Guess That Number!</h1>
+            <p>Welcome to the game!</p>
+            <label for="inputnumber">Your number</label>
+            <textarea id="inputnumber" placeholder="Enter a number between 1 and 100 And Let Ai Guess IT!" onkeydown="handleKeyDown(event)"></textarea>
+        </main>
+        <script>
+            function handleKeyDown(event) {
+                if (event.key === "Enter") {
+                    guessThatNumber();
+                }
+            }
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
