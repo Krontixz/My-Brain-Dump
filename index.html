@@ -265,6 +265,10 @@
         <option value="logs/august2026/log3.html">Sunday August 16 2026</option>
         <option value="logs/august2026/log4.html">Monday August 17 2026</option>
     </select>
+
+    <select name="projectdropdown" id="projectDropdown" onchange="if(this.value) window.location.href=this.value;">
+        <option value="" selected disabled>Project list ▾</option>
+        <option value="projects/GuessThatNumber/index.html">Guess That Number</option>
     
     <section id="text-exporter">
         <h2>ZAKI'S SIMPLE TEXT EDITOR</h2>
@@ -430,9 +434,6 @@
                 tempConverter();
             }
         }
-
-        function handleKeyPress6(event) {
-            if (event.key === 
 
         let score = 0;
         
