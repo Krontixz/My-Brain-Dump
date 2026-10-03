@@ -133,6 +133,19 @@
             resize: vertical;
         }
 
+ #truthyorfalsyinput {
+            width: 100%;
+            height: 200px;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #FFCC00;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #000;
+            resize: vertical;
+        }
+        
         #term {
             width: 100%;
             height: 200px;
@@ -383,6 +396,8 @@
         <h2>Press the button to get roasted lol</h2>
         <h4 class="video-container-subheading">You will get roasted super badly, it is as simple as it sounds, press teh button</h4>
         <button id="roast-generator-button" onclick="roastGenerator()">Press me to cry</button>
+        <h2>TruthyOrFalsy</h2>
+        <textarea id="truthyorfalsyinput" onkeydown="handleKeyPress6(event)" placeholder="type text or a number to see if it is truthy or falsy!"></textarea>
     </section>
 
     <script>
@@ -435,6 +450,12 @@
             }
         }
 
+        function handleKeyPress6(event) {
+            if (event.key === "Shift") {
+                truthyOrFalsy();
+            }
+        }
+
         let score = 0;
         
         function addScore(event) {
@@ -452,5 +473,6 @@
     <script src="scripts/random-audio-player.js"></script>
     <script src="scripts/temp-converter.js"></script>
     <script src="scripts/roast-generator.js"></script>
+    <script src="scripts/truthyorfalsy.js"></script>
 </body>
 </html>
