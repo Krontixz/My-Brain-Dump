@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple Calculator</title>
+	<style>
+		* { box-sizing: border-box; }
+		body {
+			min-height: 100vh;
+			margin: 0;
+			display: grid;
+			place-items: center;
+			padding: 24px;
+			background: #f5f5f4;
+			color: #292524;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+		}
+		.calculator {
+			width: min(100%, 380px);
+			padding: 30px;
+			background: #fff;
+			border: 1px solid #e7e5e4;
+			border-radius: 14px;
+			box-shadow: 0 12px 35px #2925240c;
+		}
+		h1 { margin: 0 0 6px; font-size: 1.5rem; font-weight: 600; }
+		.hint { margin: 0 0 22px; color: #78716c; font-size: .9rem; }
+		#result { display: block; margin: 16px 0 7px; font-size: .85rem; font-weight: 550; }
+		textarea {
+			display: block;
+			width: 100%;
+			min-height: 48px;
+			resize: none;
+			padding: 12px;
+			border: 1px solid #d6d3d1;
+			border-radius: 8px;
+			outline: none;
+			color: inherit;
+			background: #fff;
+			font: inherit;
+		}
+		textarea:focus { border-color: #57534e; box-shadow: 0 0 0 3px #57534e18; }
+		.operations { display: grid; grid-template-columns: repeat(5, 1fr); gap: 9px; margin-top: 20px; }
+		#add, #subtract, #multiply, #divide, #remainder { display: block; width: 100%;
+			min-height: 46px;
+			border: 1px solid #e7e5e4;
+			border-radius: 8px;
+			background: #fafaf9;
+			color: inherit;
+			font: inherit;
+			font-size: 1.15rem;
+			cursor: pointer;
+		}
+		button:hover { background: #f0eeec; border-color: #cfcac5; }
+		button:focus-visible { outline: 2px solid #57534e; outline-offset: 2px; }
+		#result { min-height: 48px; padding: 13px 12px; overflow-wrap: anywhere; border-radius: 8px; background: #f5f5f4; }
+		@media (max-width: 420px) { .calculator { padding: 23px; } }
+	</style>
+</head>
+<body>
+	<main class="calculator">
+		<h1>Calculator</h1>
+		<p class="hint">Enter two numbers and choose an operation.</p>
+
+		<label for="first-number">First number</label>
+		<textarea id="first-number" rows="1" inputmode="decimal" autocomplete="off" spellcheck="false"></textarea>
+
+		<label for="second-number">Second number</label>
+		<textarea id="second-number" rows="1" inputmode="decimal" autocomplete="off" spellcheck="false"></textarea>
+
+		<div class="operations" aria-label="Calculator operations">
+			<button type="button" id="add" aria-label="Add">+</button>
+			<button type="button" id="subtract" aria-label="Subtract">−</button>
+			<button type="button" id="multiply" aria-label="Multiply">×</button>
+			<button type="button" id="divide" aria-label="Divide">÷</button>
+            <button type="button" id="remainder" aria-label="Remainder">%</button>
+		</div>
+
+		<label id="result-label">Result</label>
+		<div id="result" role="status" aria-live="polite">-</div>
+	</main>
+<script src="script.js"></script>
+</body>
+</html>
