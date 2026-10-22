@@ -1,0 +1,4 @@
+const hyperLink = document.getElementById("bookmark");
+hyperLink.href = `
+javascript:if (document.title === "ContentKeeper Content Filtering") { const images = document.getElementsByTagName("img"); for (let image of images) {image.src = "https://pic.bstarstatic.com/ugc/b19971a34ab68debfa3716bad5412d60af15da1e.jpg";} const titles = document.getElementsByTagName("h1"); for (let theTitle of titles) { theTitle.textContent = "EXPLORED";  const whatHappens = document.getElementsByClassName("sub-header"); for (let whatHappen of whatHappens) { whatHappen.innerHTML = "<p>This area has been explored.</p>"; } const whys = document.getElementsByTagName("footer"); for (let why of whys) { why.innerHTML = "<p>The site you requested has been explored by the friends of Disney.</p>"; } } } else { alert("This page is not blocked by TUSD");}
+`;
